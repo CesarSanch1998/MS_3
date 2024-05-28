@@ -4,7 +4,7 @@ from models.get_client import client_db
 
 data_user =[]
 def get_clients_send(data):
-    
+    data_user.clear()
     request = session.query(client_db).order_by(client_db.frame,client_db.slot,client_db.port,client_db.onu_id).all()
     if request == None:
         return "Cliente no encontrado en la db agregando en la db"
