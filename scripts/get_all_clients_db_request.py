@@ -22,6 +22,7 @@ def get_clients_send(data):
             "name_2": user.name_2,
             "sn": user.sn,
             "plan_name": user.plan_name,
+            "device": user.device,
             "spid": user.spid})
 
     return data_user
