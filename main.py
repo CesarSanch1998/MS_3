@@ -4,12 +4,14 @@ from fastapi import HTTPException
 #////Importando rutas ///////////////////
 from routers.get_client import get_client
 from routers.get_all_clients import get_all_clients
+from routers.get_all_plans import get_all_plans
 
 app = FastAPI()
 
 #/////Agregando la ruta al route
 app.include_router(get_client)
 app.include_router(get_all_clients)
+app.include_router(get_all_plans)
 
 
 origins = [
